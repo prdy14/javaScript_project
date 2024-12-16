@@ -39,3 +39,7 @@ body {
   margin-left: 4px;
   margin-top: 9px;
 }
+
+.hide::-webkit-scrollbar {
+  display: none;
+}
