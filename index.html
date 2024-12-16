@@ -23,10 +23,10 @@
         </div>
         <div class="w-0.5 bg-slate-300 h-1/2"></div>
         <div class="w-9/12 pl-2 h-full">
-          <input type="text" id="search" placeholder="Searching for..."
-            class="bg-slate-100  focus:outline-none flex-1 text-slate-700 text-start  w-full h-full">
+          <input type="text" placeholder="Searching for..."
+            class="bg-slate-100  focus:outline-none flex-1 text-slate-700 text-start  w-full h-full" id="search">
         </div>
-        <button class=" h-full  w-20 text-center   rounded-r-md text-white  bg-primary" id="searchButton">
+        <button class="cursor-pointer h-full  w-20 text-center  rounded-r-md text-white  bg-primary" id="searchButton">
           search
         </button>
 
@@ -58,12 +58,18 @@
             </path>
           </svg>
         </a>
-        <a class="mr-3" href="/"><svg class="w-6" focusable="false" aria-hidden="true" viewBox="0 0 24 24"
+        <button class="mr-3" onclick="openCart()">
+          <div
+            class="w-5 h-5 rounded-full ml-5 absolute top-4 bg-primary text-white flex justify-center items-center text-xs">
+            <p id="count">0</p>
+          </div>
+          <svg class="w-6" focusable="false" aria-hidden="true" viewBox="0 0 24 24"
             data-testid="ShoppingBagOutlinedIcon">
             <path fill="#94a3b8"
               d="M18 6h-2c0-2.21-1.79-4-4-4S8 3.79 8 6H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2m-6-2c1.1 0 2 .9 2 2h-4c0-1.1.9-2 2-2m6 16H6V8h2v2c0 .55.45 1 1 1s1-.45 1-1V8h4v2c0 .55.45 1 1 1s1-.45 1-1V8h2z">
             </path>
-          </svg></a>
+          </svg>
+        </button>
       </div>
     </section>
     <hr>
