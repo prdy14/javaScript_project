@@ -81,7 +81,7 @@ const productDetails = document.getElementById("productDetails");
 
 productDetails.innerHTML = `
 <div class="sm:w-1/2 m-3">
-      <div class="rounded-3xl border mb-5">
+      <div class="rounded-3xl border mb-5 flex justify-center">
 
         <img
           src=${details.images[0].url}
