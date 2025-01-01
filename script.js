@@ -80,9 +80,15 @@ function getData() {
           </div>
         </div>
   `;
+        card.addEventListener("click", () => {
+          localStorage.setItem("details", JSON.stringify(ele));
+          console.log(localStorage.getItem("details"));
+          location.href = "./details.html";
+        });
         product.appendChild(card);
         const fav = document.getElementById(`fav${i}`);
-        fav.addEventListener("click", () => {
+        fav.addEventListener("click", (e) => {
+          e.stopPropagation();
           const there = isThere(favList, ele);
           console.log(there);
           if (there != -1) {
@@ -100,7 +106,8 @@ function getData() {
 
         const cart = document.getElementById(`cart${i}`);
 
-        cart.addEventListener("click", () => {
+        cart.addEventListener("click", (e) => {
+          e.stopPropagation();
           const there = isThere(cartList, ele);
           console.log(there);
           if (there == -1) {

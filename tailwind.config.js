@@ -6,9 +6,6 @@ module.exports = {
       colors: {
         primary: "#D23F57",
       },
-      maxWidth: {
-        100: "400px",
-      },
     },
   },
   plugins: [],

@@ -76,3 +76,63 @@ function isThere(arr, ele) {
   });
   return flag;
 }
+const details = JSON.parse(localStorage.getItem("details"));
+const productDetails = document.getElementById("productDetails");
+
+productDetails.innerHTML = `
+<div class="sm:w-1/2 m-3">
+      <div class="rounded-3xl border mb-5">
+
+        <img
+          src=${details.images[0].url}
+          alt="" width="auto">
+      </div>
+      <div class="flex justify-center">
+        <div class=" border rounded-lg bg-slate-50"><img
+            src=${details.images[0].url}
+            alt="" class="w-20"></div>
+        <div class="border rounded-lg bg-slate-50 ml-2"><img
+            src=${details.images[0].url}
+            alt="" class="w-20"></div>
+      </div>
+    </div>
+    <div class="p-5 space-y-4">
+      <div class="font-sans font-semibold text-3xl uppercase ml-0">${
+        details.name
+      }</div>
+      <div>Rated: <span>&#10032 &#10032 &#10032 &#10032 &#10032</span> (0)</div>
+      <div>
+
+        <div>option</div>
+        <div class="my-2">
+          <span class="border rounded p-1 mr-1 border-primary">option 1</span>
+          <span class="border rounded p-1 mr-1 border-slate-600">option 2</span>
+          <span class="border rounded p-1 mr-1 border-slate-600">option 3</span>
+          <span class="border rounded p-1 mr-1 border-slate-600">option 4</span>
+        </div>
+      </div>
+      <div>
+
+        <div>
+          type
+        </div>
+        <div class="my-2">
+          <span class="border rounded p-1 mr-1 border-primary">type 1</span>
+          <span class="border rounded p-1 mr-1 border-slate-600">type 2</span>
+          <span class="border rounded p-1 mr-1 border-slate-600">type 3</span>
+          <span class="border rounded p-1 mr-1 border-slate-600">type 4</span>
+        </div>
+      </div>
+
+      <div>
+
+        <div class="text-primary font-semibold text-3xl mt-2">Rs.${Math.floor(
+          details.price.value
+        )}</div>
+        <div>Stock available</div>
+      </div>
+
+      <button class="h-11 rounded-md w-40 mt-3 bg-primary text-white text-lg">Add To Cart</button>
+
+    </div>
+`;
