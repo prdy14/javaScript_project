@@ -41,10 +41,10 @@ products.map((ele, i) => {
             }</p>
             <div class="flex justify-between">
               <div class="flex  ">
-                <p class="text-primary font-semibold pr-2">$${
+                <p class="text-primary font-semibold pr-2">$${Math.floor(
                   ele.price.value
-                }</p>
-                <del>$${ele.price.value + 100}</del>
+                )}</p>
+                <del>$${Math.floor(ele.price.value) + 100}</del>
               </div>
               <button class="border-2 rounded-md grid ${
                 isThere(cartList, ele) !== -1

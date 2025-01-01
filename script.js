@@ -56,10 +56,10 @@ function getData() {
             }</p>
             <div class="flex justify-between">
               <div class="flex  ">
-                <p class="text-primary font-semibold pr-2">$${
+                <p class="text-primary font-semibold pr-2">$${Math.floor(
                   ele.price.value
-                }</p>
-                <del>$${ele.price.value + 100}</del>
+                )}</p>
+                <del>$${Math.floor(ele.price.value) + 100}</del>
               </div>
               <button class="border-2 rounded-md grid ${
                 isThere(cartList, ele) !== -1
@@ -146,7 +146,9 @@ function openCart() {
           </div>
           <div class="w-3/5 flex flex-col text-sm">
             <p>${ele.name} </p>
-            <p class="text-sm text-slate-600">${ele.price.value} x 1</p>
+            <p class="text-sm text-slate-600">${Math.floor(
+              ele.price.value
+            )} x 1</p>
             <div class="flex mt-4">
               <button class="border w-5 h-5 rounded-md  flex justify-center items-center border-primary">
                 <svg class="w-4" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="AddIcon">
