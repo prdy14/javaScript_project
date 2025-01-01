@@ -2,6 +2,7 @@
   width: 200px;
 }
 
+
 #productsContainer {
   display: flex;
   flex-wrap: wrap;
